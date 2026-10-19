@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+
+# Local SQLite DB (re-seeded from backend/app/seed.py on start)
+backend/words.db
+
+# Large / copyrighted source material
+# (books + everything converted from them; the conversion scripts are kept)
+Materials/DeLe_B2/
+Materials/es_50k.txt
+Materials/**/*.pdf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+#This is only for me :)
+DIFFICULTIES.md

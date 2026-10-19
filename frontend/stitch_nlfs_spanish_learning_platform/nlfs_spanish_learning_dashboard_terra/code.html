@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#4a7c59",
+          "on-error-container": "#690005",
+          "surface-container-high": "#eae6de",
+          "on-background": "#2e3230",
+          "tertiary-fixed": "#f8e0a8",
+          "tertiary": "#705c30",
+          "on-tertiary-fixed": "#221a05",
+          "outline": "#74796e",
+          "primary-fixed": "#c8e8d0",
+          "on-secondary-container": "#5e5548",
+          "surface-tint": "#4a7c59",
+          "error-container": "#ffdad8",
+          "background": "#faf6f0",
+          "on-surface-variant": "#4a4e4a",
+          "surface": "#faf6f0",
+          "error": "#b83230",
+          "on-secondary": "#ffffff",
+          "tertiary-fixed-dim": "#dcc48e",
+          "on-secondary-fixed-variant": "#4a4538",
+          "surface-variant": "#e4e0d8",
+          "on-primary": "#ffffff",
+          "on-surface": "#2e3230",
+          "surface-dim": "#dbd7cf",
+          "surface-container-lowest": "#ffffff",
+          "secondary-fixed": "#f0e8db",
+          "on-secondary-fixed": "#1e1a13",
+          "on-error": "#ffffff",
+          "primary-fixed-dim": "#8ecf9e",
+          "tertiary-container": "#c4a66a",
+          "on-primary-container": "#d8f0de",
+          "secondary": "#6b6358",
+          "inverse-surface": "#2e3230",
+          "surface-container-low": "#f5f1ea",
+          "inverse-on-surface": "#f5f0e8",
+          "on-tertiary-fixed-variant": "#554020",
+          "on-primary-fixed": "#002110",
+          "on-tertiary": "#ffffff",
+          "surface-container": "#f0ece4",
+          "on-primary-fixed-variant": "#2a6038",
+          "inverse-primary": "#8ecf9e",
+          "on-tertiary-container": "#554020",
+          "primary-container": "#5c916c",
+          "secondary-container": "#f0e8db",
+          "secondary-fixed-dim": "#d4ccbf",
+          "outline-variant": "#c4c8bc",
+          "surface-container-highest": "#e4e0d8",
+          "surface-bright": "#faf6f0"
+        },
+        borderRadius: {
+          "DEFAULT": "0.75rem",
+          "md": "0.75rem",
+          "lg": "1rem",
+          "xl": "1.25rem",
+          "2xl": "1.5rem",
+          "full": "9999px"
+        },
+        spacing: {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2.5rem"
+        },
+        fontFamily: {
+          "headline": ["Literata", "serif"],
+          "display": ["Literata", "serif"],
+          "body": ["Nunito Sans", "sans-serif"],
+          "label": ["Nunito Sans", "sans-serif"]
+        }
+      }
+    }
+  }
+</script></head><body class="bg-background font-body text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low border-r border-outline-variant/30 z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex flex-col h-full overflow-hidden"><div class="h-16 flex items-center justify-between px-space-md shrink-0 border-b border-outline-variant/20"><div class="flex items-center gap-space-sm"><img alt="NLFS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi8ccU7UXcogn-IIlAcApMpCXre6JUxTzrUQ8f8_5y85XuOZ-U3oZjmW4KVSNsmKmESva5NgkD4yqf_x4K_eZLwe5ceaN_z68soUQ0sjNtt_44fiOc4gN_2LiGl-MalnHuF1MGqgZ45PFMSP0dpoWP2LY-PcMYul2ZAP5LihHKq-JLSyEnYWv5Ys_alUG0dDXEFsR4sHhO5QA3hptmuM0fUMocruN8VBr1C5mLy17Tr5cUKBtA236mbA"/><span class="font-headline font-bold text-xl text-primary tracking-tight">NLFS</span></div><div class="flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label text-xs font-semibold"><span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span><span>14 días racha</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md"><nav class="space-y-space-md"><div class="space-y-1"><div class="px-space-sm py-1 font-label text-[11px] font-bold text-outline uppercase tracking-wider">Learning Hub</div><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl transition-all bg-primary text-on-primary font-semibold shadow-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span>Inicio / Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="teoria-reglas" href="#"><span class="material-symbols-outlined text-xl">menu_book</span><span>Teoría y Reglas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tests-quizzes" href="#"><span class="material-symbols-outlined text-xl">assignment</span><span>Tests y Quizzes</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tarjetas-flashcards" href="#"><span class="material-symbols-outlined text-xl">style</span><span>Tarjetas / Flashcards</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="niveles-mcer" href="#"><span class="material-symbols-outlined text-xl">format_list_numbered</span><span>Niveles MCER</span></a></div><div class="space-y-1"><div class="px-space-sm py-1 font-label text-[11px] font-bold text-outline uppercase tracking-wider">Personal</div><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="progress-achievements" href="#"><span class="material-symbols-outlined text-xl">insights</span><span>Mi Progreso</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-xl">settings</span><span>Ajustes</span></a></div></nav></div><div class="p-space-sm shrink-0 bg-surface-container mx-space-sm mb-space-sm rounded-2xl border border-outline-variant/30 shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-sm"><img alt="Elena M." class="w-10 h-10 rounded-full object-cover ring-1 ring-primary/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf-CrGyK6ta8Mn7HQc2e3WPOXUQo0rWRWjaxVBgxEtfs-oOCUut5fME3LjvkftyiCJp_y48juMpwIiRDJb6WhQUM_tjSUR_ava-_DHKa7ShQ2squ8lzBTYHjpGwxJxPOTO8UkWCcpYyTWYK9nH7Nj2nukgkY64rm-y66NvGC0TNKjxwEaFUxBZZInkG8IwlU0j-eElPvBn5HNSfoCA9KLWZniWKqapoSqOErATCmdrqrXwmV2DpR1ebw"/><div class="flex flex-col min-w-0 flex-1"><span class="font-label font-bold text-sm text-on-surface truncate">Elena M.</span><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label text-xs text-on-surface-variant truncate">B1 Intermedio</span></div></div><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-xl">expand_more</span></button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-md z-40 border-b border-outline-variant/30 shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline/70 pl-10 pr-space-md py-2 rounded-full font-body text-sm border border-outline-variant/30 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:bg-surface-container-lowest transition-all" placeholder="Buscar lecciones, palabras o gramática..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container-low p-1 rounded-full border border-outline-variant/30"><span class="font-label text-xs text-on-surface-variant px-2 font-medium">Nivel:</span><button class="px-2.5 py-0.5 rounded-full font-label text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">A1</button><button class="px-2.5 py-0.5 rounded-full font-label text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">A2</button><button class="px-2.5 py-0.5 rounded-full font-label text-xs bg-primary text-on-primary font-bold shadow-sm" type="button">B1</button><button class="px-2.5 py-0.5 rounded-full font-label text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">B2</button><button class="px-2.5 py-0.5 rounded-full font-label text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">C1</button></div><button class="relative p-2 rounded-full bg-surface-container-low border border-outline-variant/30 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button><button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-full bg-primary text-on-primary hover:bg-primary-container font-label text-sm font-semibold transition-all shadow-sm" type="button"><span class="material-symbols-outlined text-lg">play_arrow</span><span>Práctica Diaria</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf-CrGyK6ta8Mn7HQc2e3WPOXUQo0rWRWjaxVBgxEtfs-oOCUut5fME3LjvkftyiCJp_y48juMpwIiRDJb6WhQUM_tjSUR_ava-_DHKa7ShQ2squ8lzBTYHjpGwxJxPOTO8UkWCcpYyTWYK9nH7Nj2nukgkY64rm-y66NvGC0TNKjxwEaFUxBZZInkG8IwlU0j-eElPvBn5HNSfoCA9KLWZniWKqapoSqOErATCmdrqrXwmV2DpR1ebw"/></div></div></header><main class="relative pt-16 w-full bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-md lg:px-space-xl py-space-lg space-y-space-xl max-w-[1400px] mx-auto w-full">
+<!-- Section 1: Welcome Banner & Daily Motivation (Tactile Bento Hero) -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm p-space-md lg:p-space-xl">
+<div class="absolute -right-16 -top-16 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-20 w-80 h-80 rounded-full bg-secondary-fixed/40 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+              Ruta Activa • B1 Intermedio
+            </span>
+<span class="text-outline/40 font-label text-xs">|</span>
+<span class="text-on-surface-variant font-label text-xs font-medium">Día 14 en racha</span>
+</div>
+<h1 class="font-headline font-semibold text-3xl sm:text-4xl text-on-surface tracking-tight mt-1">
+            ¡Hola, Elena! Bienvenido de nuevo
+          </h1>
+<p class="font-body text-base text-on-surface-variant">
+            Estás a solo <span class="font-bold text-primary">15 minutos</span> de alcanzar tu objetivo diario de fluidez.
+          </p>
+<!-- Weekly Streak Strip -->
+<div class="pt-space-sm flex flex-wrap items-center gap-space-sm">
+<span class="font-label text-xs font-semibold text-on-surface-variant mr-1">Racha semanal:</span>
+<div class="flex items-center gap-1.5 bg-surface-container-low border border-outline-variant/30 px-3 py-1.5 rounded-full">
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-outline font-semibold">L</span>
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-outline font-semibold">M</span>
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-outline font-semibold">X</span>
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-outline font-semibold">J</span>
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-outline font-semibold">V</span>
+<span class="w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center text-[10px] font-bold shadow-sm animate-pulse">●</span>
+</div>
+<div class="flex flex-col items-center opacity-40">
+<span class="text-[10px] text-outline font-semibold">S</span>
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center text-[10px] text-outline">○</span>
+</div>
+<div class="flex flex-col items-center opacity-40">
+<span class="text-[10px] text-outline font-semibold">D</span>
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center text-[10px] text-outline">○</span>
+</div>
+</div>
+<span class="font-label text-xs text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+              +50 XP bono mañana
+            </span>
+</div>
+</div>
+<!-- Action & XP Goal Card -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-space-md shrink-0 lg:w-80 bg-surface-container-low border border-outline-variant/30 p-space-md rounded-2xl">
+<div class="flex-1 space-y-1.5">
+<div class="flex justify-between items-center text-xs font-label">
+<span class="text-on-surface-variant font-semibold">Meta de XP Diaria</span>
+<span class="text-primary font-bold">350 / 500 XP</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 70%"></div>
+</div>
+<p class="text-[11px] text-outline">70% completado. 1 lección más para alcanzar el cofre.</p>
+</div>
+<a class="w-full inline-flex items-center justify-center gap-space-xs px-space-md py-3 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label text-sm font-semibold shadow-sm hover:shadow transition-all group" href="#">
+<span class="material-symbols-outlined text-xl transition-transform group-hover:scale-110">play_circle</span>
+<span>Continuar: Subjuntivo</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Section 2: Active Curriculum Track -->
+<div class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label text-xs uppercase tracking-wider text-outline font-bold">Plan de Estudio Principal</span>
+<h2 class="font-headline font-semibold text-2xl lg:text-3xl text-on-surface tracking-tight mt-0.5">Español Intermedio (Nivel B1)</h2>
+</div>
+<a class="inline-flex items-center gap-1 font-label text-sm text-primary hover:text-primary-container font-semibold transition-colors" href="#">
+<span>Ver temario completo</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<!-- Unit Overview Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg border border-outline-variant/40 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label text-xs font-bold">Unidad 4</span>
+<span class="text-on-surface-variant font-label text-xs">5 de 8 lecciones completadas</span>
+</div>
+<h3 class="font-headline font-semibold text-xl text-on-surface mt-0.5">Viajes, Reservas y Cultura Urbana</h3>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<div class="text-right">
+<span class="font-headline text-2xl text-primary font-bold">68%</span>
+<span class="block text-outline font-label text-xs">Progreso de la unidad</span>
+</div>
+<div class="w-24 sm:w-36 h-2.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 68%"></div>
+</div>
+</div>
+</div>
+<!-- 3 Sequential Modules -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-md border-t border-outline-variant/20">
+<!-- Lesson 14 -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 hover:border-outline-variant transition-all p-space-md rounded-2xl flex flex-col justify-between group cursor-pointer shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-primary uppercase bg-surface-container-lowest px-2 py-0.5 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-xs">quiz</span>
+                  Gramática Interactiva
+                </span>
+<span class="text-xs font-semibold text-outline">12 min</span>
+</div>
+<h4 class="font-headline font-semibold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Pretérito Imperfecto vs. Indefinido
+              </h4>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">
+                Aprende a narrar eventos pasados distinguiendo acciones puntuales de descripciones de contexto.
+              </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label text-xs font-bold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">stars</span> +40 XP
+              </span>
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Guided Conversation -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 hover:border-outline-variant transition-all p-space-md rounded-2xl flex flex-col justify-between group cursor-pointer shadow-sm"><div class="space-y-space-xs"><div class="flex items-center justify-between"><span class="inline-flex items-center gap-1 text-[11px] font-bold text-secondary uppercase bg-surface-container-lowest px-2 py-0.5 rounded-lg border border-outline-variant/20"><span class="material-symbols-outlined text-xs">quiz</span>Evaluación / Quiz</span><span class="text-xs font-semibold text-outline">15 preguntas</span></div><h4 class="font-headline font-semibold text-lg text-on-surface group-hover:text-primary transition-colors">Quiz: Pretérito vs. Indefinido</h4><p class="font-body text-xs text-on-surface-variant line-clamp-2">Comprueba tu dominio de tiempos narrativos pasados con reactivos de opción múltiple y contexto.</p></div><div class="pt-space-md flex items-center justify-between"><span class="font-label text-xs font-bold text-tertiary flex items-center gap-1"><span class="material-symbols-outlined text-sm">stars</span> +35 XP</span><span class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center group-hover:scale-105 transition-all shadow-sm border border-outline-variant/30"><span class="material-symbols-outlined text-sm">play_arrow</span></span></div></div>
+<!-- Key Vocabulary -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 hover:border-outline-variant transition-all p-space-md rounded-2xl flex flex-col justify-between group cursor-pointer shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-tertiary uppercase bg-surface-container-lowest px-2 py-0.5 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-xs">style</span>
+                  Vocabulario Clave
+                </span>
+<span class="text-xs font-semibold text-outline">25 palabras</span>
+</div>
+<h4 class="font-headline font-semibold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Expresiones coloquiales esenciales
+              </h4>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">
+                "Estar como una cabra", "tomar el pelo", "ser pan comido" y más locuciones cotidianas.
+              </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label text-xs font-bold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">stars</span> +25 XP
+              </span>
+<span class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center group-hover:scale-105 transition-all shadow-sm border border-outline-variant/30">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Today's Practice Grid (3 Columns Bento) -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline font-semibold text-2xl lg:text-3xl text-on-surface tracking-tight">Práctica Recomendada para Hoy</h2>
+<span class="font-label text-xs text-outline">Actualizado hace 2 horas</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- 1. Flashcards Spaced Repetition Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md flex flex-col justify-between border border-outline-variant/40 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">style</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label text-xs font-bold">
+                Repaso Urgente
+              </span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-lg text-on-surface">Repetición Espaciada</h3>
+<p class="font-body text-xs text-on-surface-variant mt-1">
+                Tienes 50 tarjetas programadas según tu curva de olvido de la semana anterior.
+              </p>
+</div>
+<!-- Mini visual of stacked flashcards -->
+<div class="relative h-28 my-space-xs flex items-center justify-center">
+<div class="absolute w-11/12 h-20 bg-surface-container-high rounded-xl transform -rotate-3 transition-transform group-hover:-rotate-6 border border-outline-variant/30"></div>
+<div class="absolute w-11/12 h-20 bg-surface-container rounded-xl transform rotate-2 transition-transform group-hover:rotate-4 border border-outline-variant/30"></div>
+<div class="relative w-11/12 h-20 bg-surface-container-lowest border border-outline-variant/40 shadow-sm rounded-xl p-3 flex flex-col justify-between">
+<div class="flex justify-between items-center text-xs text-outline font-semibold">
+<span>Tarjeta 1 / 50</span>
+<span class="text-primary font-bold">Verbo reflexivo</span>
+</div>
+<div class="font-headline text-base text-on-surface text-center font-bold">
+                  Acordarse de
+                </div>
+<div class="text-[10px] text-center text-outline italic">Toca para voltear significado</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm">
+<button class="w-full py-2.5 px-space-md rounded-xl bg-primary text-on-primary font-label text-sm font-semibold hover:bg-primary-container transition-colors flex items-center justify-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">play_arrow</span>
+<span>Repasar Ahora (50 tarjetas)</span>
+</button>
+</div>
+</div>
+<!-- 2. Micro-Story with Audio Waveform -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md flex flex-col justify-between border border-outline-variant/40 shadow-sm hover:shadow-md transition-shadow group"><div class="space-y-space-sm"><div class="flex items-center justify-between"><div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center"><span class="material-symbols-outlined text-2xl">menu_book</span></div><span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label text-xs font-semibold">4 min lectura</span></div><div><span class="font-label text-xs text-outline uppercase font-bold">Bloque Teórico del Día</span><h3 class="font-headline font-semibold text-lg text-on-surface mt-0.5">Guía: Usos del Subjuntivo</h3><p class="font-body text-xs text-on-surface-variant mt-1 line-clamp-2">Reglas sintéticas para identificar cláusulas relativas con antecedente indefinido o negativo.</p></div><div class="bg-surface-container-low p-space-sm rounded-xl border border-outline-variant/30 space-y-1.5"><div class="flex items-center justify-between text-xs text-on-surface-variant font-semibold"><span class="text-primary font-bold">Regla Clave MCER B1</span><span>Fórmula sintáctica</span></div><div class="bg-surface-container-lowest p-2 rounded-lg text-xs font-mono text-on-surface-variant border border-outline-variant/30">[Verbo principal] + que + [Subjuntivo]</div></div></div><div class="pt-space-sm"><button class="w-full py-2.5 px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 text-on-surface font-label text-sm font-semibold transition-colors flex items-center justify-center gap-1.5" type="button"><span class="material-symbols-outlined text-lg text-primary">chrome_reader_mode</span><span>Leer Teoría Completa</span></button></div></div>
+<!-- 3. Community Speaking Room -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md flex flex-col justify-between border border-outline-variant/40 shadow-sm hover:shadow-md transition-shadow group"><div class="space-y-space-sm"><div class="flex items-center justify-between"><div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center"><span class="material-symbols-outlined text-2xl">assignment</span></div><span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold">10 Preguntas</span></div><div><span class="font-label text-xs text-outline uppercase font-bold">Test Rápido / Quiz</span><h3 class="font-headline font-semibold text-lg text-on-surface mt-0.5">Repaso Rápido: Nivel B1</h3><p class="font-body text-xs text-on-surface-variant mt-1">Evaluación formativa para validar concordancia verbal y pronombres relativos antes de avanzar.</p></div><div class="bg-surface-container-low p-space-sm rounded-xl border border-outline-variant/30 flex items-center justify-between"><div class="space-y-0.5"><span class="text-xs font-bold text-on-surface block">Formato Cronometrado</span><span class="text-[11px] text-outline">Tiempo estimado: 5 minutos</span></div><span class="px-2 py-1 rounded-lg bg-surface-container-lowest font-label text-xs font-bold text-primary border border-outline-variant/20">+50 XP</span></div></div><div class="pt-space-sm"><button class="w-full py-2.5 px-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-sm font-semibold transition-colors flex items-center justify-center gap-1.5 border border-outline-variant/20" type="button"><span class="material-symbols-outlined text-lg text-primary">play_circle</span><span>Iniciar Quiz Rápido</span></button></div></div>
+</div>
+</div>
+<!-- Section 4 & 5 Bento: Progress Analytics + Upcoming Live Tutor Card -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Progress & Analytics Snapshot (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-2xl p-space-lg border border-outline-variant/40 shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h3 class="font-headline font-semibold text-xl text-on-surface">Métricas de Aprendizaje</h3>
+<p class="font-body text-xs text-on-surface-variant">Progreso acumulado durante los últimos 7 días</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low border border-outline-variant/30 px-3 py-1 rounded-full text-xs font-label text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-base text-primary">schedule</span>
+<span>4.5 / 5.0 hrs semanales</span>
+</div>
+</div>
+<!-- Metric highlights -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low border border-outline-variant/30 p-space-md rounded-2xl">
+<span class="text-outline font-label text-xs block font-medium">Vocabulario Dominado</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline text-2xl text-on-surface font-bold">1.420</span>
+<span class="text-primary font-label text-xs font-bold flex items-center">
+<span class="material-symbols-outlined text-xs">arrow_upward</span> +34
+              </span>
+</div>
+<span class="text-[11px] text-outline mt-1 block">Palabras en memoria a largo plazo</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/30 p-space-md rounded-2xl"><span class="text-outline font-label text-xs block font-medium">Tests Completados</span><div class="flex items-baseline gap-2 mt-1"><span class="font-headline text-2xl text-on-surface font-bold">24</span><span class="font-headline text-lg text-tertiary font-bold">92%</span></div><span class="text-[11px] text-outline mt-1 block">Promedio de acierto global</span></div>
+<div class="bg-surface-container-low border border-outline-variant/30 p-space-md rounded-2xl">
+<span class="text-outline font-label text-xs block font-medium">Precisión Gramatical</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline text-2xl text-primary font-bold">84%</span>
+<span class="text-outline font-label text-xs">promedio</span>
+</div>
+<span class="text-[11px] text-outline mt-1 block">En ejercicios de conjugación</span>
+</div>
+</div>
+<!-- Weekly Chart + CEFR Skills -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg pt-space-xs">
+<!-- Study Hours Bar Visualization (SVG) -->
+<div class="space-y-2">
+<div class="flex justify-between items-center text-xs font-label text-on-surface-variant">
+<span class="font-semibold">Horas de Estudio por Día</span>
+<span class="text-primary font-bold">Meta: 45 min/día</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/30 p-4 rounded-2xl flex items-end justify-between h-40 pt-6">
+<div class="flex flex-col items-center gap-1.5 flex-1">
+<div class="w-6 bg-primary-fixed rounded-t-lg h-16"></div>
+<span class="text-[10px] text-outline font-semibold">L</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 flex-1">
+<div class="w-6 bg-primary-fixed rounded-t-lg h-24"></div>
+<span class="text-[10px] text-outline font-semibold">M</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 flex-1">
+<div class="w-6 bg-primary-container rounded-t-lg h-28"></div>
+<span class="text-[10px] text-outline font-semibold">X</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 flex-1">
+<div class="w-6 bg-primary rounded-t-lg h-20"></div>
+<span class="text-[10px] text-outline font-semibold">J</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 flex-1">
+<div class="w-6 bg-primary rounded-t-lg h-32 relative">
+<span class="absolute -top-5 left-1/2 -translate-x-1/2 text-[9px] font-bold text-primary">Hoy</span>
+</div>
+<span class="text-[10px] text-primary font-bold">V</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 flex-1 opacity-40">
+<div class="w-6 bg-surface-container-high rounded-t-lg h-4"></div>
+<span class="text-[10px] text-outline font-semibold">S</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 flex-1 opacity-40">
+<div class="w-6 bg-surface-container-high rounded-t-lg h-4"></div>
+<span class="text-[10px] text-outline font-semibold">D</span>
+</div>
+</div>
+</div>
+<!-- CEFR Competency Breakdown -->
+<div class="space-y-space-sm flex flex-col justify-between">
+<span class="font-label text-xs font-semibold text-on-surface-variant block">Competencias MCER (B1)</span>
+<div class="space-y-3">
+<!-- Competency 1 -->
+<div>
+<div class="flex justify-between text-xs font-label mb-1">
+<span class="text-on-surface flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm text-primary">hearing</span>
+                    Comprensión Auditiva
+                  </span>
+<span class="font-bold text-on-surface">78%</span>
+</div>
+<div class="h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Competency 2 -->
+<div>
+<div class="flex justify-between text-xs font-label mb-1">
+<span class="text-on-surface flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm text-secondary">forum</span>
+                    Conversación &amp; Fluidez
+                  </span>
+<span class="font-bold text-on-surface">70%</span>
+</div>
+<div class="h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<!-- Competency 3 -->
+<div>
+<div class="flex justify-between text-xs font-label mb-1">
+<span class="text-on-surface flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm text-secondary">edit_note</span>
+                    Gramática &amp; Redacción
+                  </span>
+<span class="font-bold text-on-surface">65%</span>
+</div>
+<div class="h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/30 px-3 py-2 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">verified</span>
+<span class="text-xs text-on-surface-variant font-medium">Próxima prueba de nivel estimada en 2 semanas.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Scheduled CEFR Official Track (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-2xl p-space-lg border border-outline-variant/40 shadow-sm flex flex-col justify-between relative overflow-hidden"><div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-primary-fixed/30 blur-2xl pointer-events-none"></div><div class="space-y-space-md"><div class="flex items-center justify-between"><span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label text-xs font-bold uppercase tracking-wider">Evaluación Oficial MCER</span><span class="inline-flex items-center gap-1 text-xs font-bold text-tertiary"><span class="material-symbols-outlined text-sm">timer</span>45 min</span></div><div class="space-y-2"><div><span class="text-[11px] font-bold uppercase text-outline tracking-wider">Certificación de Nivel</span><h4 class="font-headline font-semibold text-xl text-on-surface mt-1">Próximo Examen Nivel B1</h4></div><p class="font-body text-xs text-on-surface-variant">Simulación integral de examen estandarizado MCER B1: comprensión lectora, precisión gramatical y léxico contextual.</p></div><div class="bg-surface-container-low border border-outline-variant/30 p-space-md rounded-2xl space-y-2"><div class="flex justify-between items-center text-xs font-label"><span class="text-on-surface-variant font-semibold">Requisitos completados</span><span class="text-primary font-bold">4 / 5 módulos</span></div><div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden"><div class="h-full bg-primary rounded-full" style="width: 80%"></div></div><p class="text-[11px] text-outline">Cumples el 80% de los requisitos para la prueba de nivel B2.</p></div><div class="space-y-2 text-xs text-on-surface-variant"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">checklist</span><span>60 preguntas estructuradas con corrección automática</span></div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">verified</span><span>Diagnóstico detallado por competencia MCER</span></div></div></div><div class="pt-space-lg space-y-2"><button class="w-full py-3 px-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label text-sm font-semibold transition-colors flex items-center justify-center gap-2 shadow-sm" type="button"><span class="material-symbols-outlined text-lg">quiz</span><span>Realizar Test Simulado</span></button><button class="w-full py-2 px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 text-on-surface-variant font-label text-xs font-semibold transition-colors text-center" type="button">Ver criterios y escala MCER</button></div></div>
+</div>
+<!-- Cultural Tip Footer Strip -->
+<div class="rounded-2xl bg-surface-container-low border border-outline-variant/30 p-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">lightbulb</span>
+</div>
+<div>
+<span class="font-label text-xs uppercase font-bold text-primary">Cultura &amp; Usos Reales</span>
+<p class="font-body text-sm text-on-surface mt-0.5">
+            ¿Sabías que en España la sobremesa puede durar horas? Aprende las expresiones típicas para continuar una buena conversación después del postre.
+          </p>
+</div>
+</div>
+<a class="shrink-0 px-space-md py-2.5 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary border border-outline-variant/30 font-label text-xs font-bold transition-all shadow-sm" href="#">
+        Explorar Cápsula Cultural
+      </a>
+</div>
+</div>
+</div></main></div>
+</body></html>
